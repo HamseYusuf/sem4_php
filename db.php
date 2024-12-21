@@ -3,7 +3,7 @@
 $host  = 'localhost';
 $username = 'root';
 $password = '';
-$dbname = 'sem4_db';
+$dbname = 'atu';
 
 try{
 

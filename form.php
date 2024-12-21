@@ -30,7 +30,7 @@ include('db.php');
         }
         if(empty($empty_err) && empty($phone_err) && empty($address_err)) {
 
-            $sql = 'INSERT INTO employees (name , phone , address) VALUES (:name , :phone , :address)';
+            $sql = 'INSERT INTO students (name , phone , address) VALUES (:name , :phone , :address)';
 
             try {
 

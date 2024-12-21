@@ -19,11 +19,11 @@ include('db.php');
                     <th>Name</th>
                     <th>Phone</th>
                     <th>Address</th>
-                    <th>Details</th>
+                    <th>Detail</th>
                 </thead>
                 <tbody>
                   <?php  
-                  $sql = 'SELECT * FROM employees';
+                  $sql = 'SELECT * FROM students';
                   $stmt = $conn->query($sql);
                   $employees = $stmt->fetchAll();
 
@@ -35,11 +35,9 @@ include('db.php');
                         <td><?php echo $employee['phone']; ?></td>
                         <td><?php echo $employee['address']; ?></td>
                         <td>
-                            <a href="detail.php?id=<?php echo $employee['ID'] ?>" class="btn btn-sm-m-2 p-2 btn-info">View</a>
+                            <a href="detail.php?id=<?php echo $employee['ID'];  ?>" class="btn btn-secondary btn-sm">View</a>
                         </td>
                     </tr>
-
-
                <?php   } ?>
                   
                  
