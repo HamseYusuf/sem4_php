@@ -5,6 +5,8 @@
 include('base.php');
 include('db.php');
 
+session_start();
+
 ?>
 
   <body>
@@ -39,6 +41,7 @@ include('db.php');
                 $stmt->bindParam(':phone' , $phone);
                 $stmt->bindParam(':address' , $address);
                 $stmt->execute();
+                $_SESSION['success'] = 'Student Added Succesfully';
                 header("Location: index.php");
             } catch(PDOException $e){
                 echo 'insertion failed' . $e;
